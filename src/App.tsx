@@ -4,12 +4,13 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Container, Typography, Box } from '@mui/material';
 import UserDataForm from './Components/FirstPage';
 import DataTable from './Components/DataTable';
-import DepartmentListUI from './Components/DepartmentList'; // <-- Import the new component
+import DepartmentListUI from './Components/DepartmentListUI'; // <-- Import the new component
 
 const App: React.FC = () => {
   // Hardcoded department data
-  const data = [
-    {
+  const data:any = [
+    { 
+      
       "department": "customer_service",
       "sub_departments": [
         "support",
@@ -17,6 +18,7 @@ const App: React.FC = () => {
       ]
     },
     {
+      
       "department": "design",
       "sub_departments": [
         "graphic_design",
@@ -38,7 +40,7 @@ const App: React.FC = () => {
             <Route path="/data-table" element={<DataTable />} />
             <Route path="/" element={<UserDataForm />} />
           </Routes>
-          <DepartmentListUI data={data} /> {/* Pass the hardcoded department data here */}
+          <DepartmentListUI data= {data }/> {/* Pass the hardcoded department data here */}
         </Box>
       </Container>
     </Router>

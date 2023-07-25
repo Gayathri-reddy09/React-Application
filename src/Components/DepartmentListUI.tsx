@@ -6,11 +6,11 @@ import { ExpandLess, ExpandMore } from '@mui/icons-material';
 interface Department {
   id: number;
   department: string;
-  sub_departments: { id: number; name: string }[];
+  sub_departments:{id:number;name:string}[];
 }
 
 interface DepartmentListUIProps {
-  data: Department[];
+  data : Department[];
 }
 
 const DepartmentListUI: React.FC<DepartmentListUIProps> = ({ data }) => {
